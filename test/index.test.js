@@ -24,23 +24,6 @@ describe('<App />', () => {
 describe('<Timer />', () => {
   var timerWrapper
 
-  it('calls componentDidMount', () => {
-    spy(Timer.prototype, 'componentDidMount');
 
-    timerWrapper = shallow(<Timer />);
-
-    //component mounted correctly
-    expect(Timer.prototype.componentDidMount.calledOnce, "componentDidMount was not called").to.equal(true);
-    timerWrapper.unmount()
-  });
-
-
-  it('calls componentWillUnmount', () => {
-    spy(Timer.prototype, 'componentWillUnmount');
-    timerWrapper = shallow(<Timer />);
-    timerWrapper.unmount()
-    expect(Timer.prototype.componentWillUnmount.calledOnce).to.equal(true);
-
-  })
 
 });
